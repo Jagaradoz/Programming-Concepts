@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <title>Bootstrap Buttons & Button Groups</title>
+</head>
+
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4 text-center">Buttons & Button Groups</h1>
+
+    <h2>1. Basic Buttons</h2>
+    <!-- Standard Bootstrap button classes -->
+    <button class="btn btn-primary">Primary</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-danger">Danger</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-light">Light</button>
+    <button class="btn btn-dark">Dark</button>
+    <button class="btn btn-link">Link</button>
+
+    <hr>
+
+    <h2>2. Outline Buttons</h2>
+    <!-- Outline variants -->
+    <button class="btn btn-outline-primary">Primary</button>
+    <button class="btn btn-outline-secondary">Secondary</button>
+    <button class="btn btn-outline-success">Success</button>
+    <button class="btn btn-outline-danger">Danger</button>
+    <button class="btn btn-outline-warning">Warning</button>
+    <button class="btn btn-outline-info">Info</button>
+    <button class="btn btn-outline-light text-dark">Light</button>
+    <button class="btn btn-outline-dark">Dark</button>
+
+    <hr>
+
+    <h2>3. Button Sizes</h2>
+    <!-- Size variations -->
+    <button class="btn btn-primary btn-lg">Large Button</button>
+    <button class="btn btn-primary">Default Button</button>
+    <button class="btn btn-primary btn-sm">Small Button</button>
+
+    <hr>
+
+    <h2>4. Disabled & Active States</h2>
+    <!-- Disabled and active examples -->
+    <button class="btn btn-primary active">Active Button</button>
+    <button class="btn btn-primary" disabled>Disabled Button</button>
+    <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Disabled Link</a>
+
+    <hr>
+
+    <h2>5. Block (Full-Width) Buttons</h2>
+    <!-- Full-width buttons using d-grid -->
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary">Full-Width Button</button>
+      <button class="btn btn-success">Another Full-Width Button</button>
+    </div>
+
+    <hr>
+
+    <h2>6. Button Tags</h2>
+    <!-- Using buttons as <a>, <button>, <input> -->
+    <a class="btn btn-primary" href="#" role="button">Link Button</a>
+    <button class="btn btn-success" type="submit">Button Element</button>
+    <input class="btn btn-danger" type="button" value="Input Button">
+    <input class="btn btn-warning" type="submit" value="Submit Button">
+    <input class="btn btn-info" type="reset" value="Reset Button">
+
+    <hr>
+
+    <h2>7. Button Groups</h2>
+    <!-- Grouping buttons horizontally -->
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <button type="button" class="btn btn-primary">Left</button>
+      <button type="button" class="btn btn-primary">Middle</button>
+      <button type="button" class="btn btn-primary">Right</button>
+    </div>
+
+    <hr>
+
+    <h2>8. Button Toolbar</h2>
+    <!-- Combine multiple groups into a toolbar -->
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group me-2" role="group" aria-label="First group">
+        <button type="button" class="btn btn-secondary">1</button>
+        <button type="button" class="btn btn-secondary">2</button>
+        <button type="button" class="btn btn-secondary">3</button>
+        <button type="button" class="btn btn-secondary">4</button>
+      </div>
+      <div class="btn-group me-2" role="group" aria-label="Second group">
+        <button type="button" class="btn btn-secondary">5</button>
+        <button type="button" class="btn btn-secondary">6</button>
+        <button type="button" class="btn btn-secondary">7</button>
+      </div>
+      <div class="btn-group" role="group" aria-label="Third group">
+        <button type="button" class="btn btn-secondary">8</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>9. Vertical Button Group</h2>
+    <!-- Stack buttons vertically -->
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+      <button type="button" class="btn btn-primary">Top</button>
+      <button type="button" class="btn btn-primary">Middle</button>
+      <button type="button" class="btn btn-primary">Bottom</button>
+    </div>
+
+    <hr>
+
+    <h2>10. Dropdown Button Group</h2>
+    <!-- Buttons with dropdowns -->
+    <div class="btn-group">
+      <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Dropdown
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else</a></li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <h2>11. Toggle Buttons</h2>
+    <!-- Checkbox and radio toggle buttons -->
+    <div class="mb-3">
+      <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off">
+      <label class="btn btn-outline-primary" for="btn-check-1">Checkbox Button</label>
+
+      <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+      <label class="btn btn-outline-success" for="option1">Radio 1</label>
+
+      <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+      <label class="btn btn-outline-success" for="option2">Radio 2</label>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

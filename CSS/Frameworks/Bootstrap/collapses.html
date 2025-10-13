@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <title>Bootstrap Collapse Cheat Sheet</title>
+</head>
+
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4 text-center">Bootstrap Collapse</h1>
+
+    <!-- 1. Basic Collapse -->
+    <h2>1. Basic Collapse</h2>
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Toggle Content
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body">
+        This is some collapsible content. Click the button above to hide/show this content.
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 2. Collapse with Button -->
+    <h2>2. Collapse with Button</h2>
+    <button class="btn btn-success mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseButtonExample" aria-expanded="false" aria-controls="collapseButtonExample">
+      Toggle with Button
+    </button>
+    <div class="collapse" id="collapseButtonExample">
+      <div class="card card-body">
+        Collapsible content triggered by a button element.
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 3. Multiple Collapse -->
+    <h2>3. Multiple Collapse</h2>
+    <p>
+      <a class="btn btn-info" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle First</a>
+      <a class="btn btn-warning" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle Second</a>
+    </p>
+    <div class="row">
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            First collapsible content.
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+            Second collapsible content.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 4. Collapse with Accordion Behavior -->
+    <h2>4. Collapse with Accordion Behavior</h2>
+    <p>Even without using the full accordion component, you can collapse multiple elements independently.</p>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

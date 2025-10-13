@@ -1,0 +1,184 @@
+/* ===== SELECTORS ===== */
+
+/* Universal selector – targets all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Type selector – targets all <p> elements */
+p {
+  font-size: 16px;
+}
+
+/* Class selector – targets elements with class="box" */
+.box {
+  background-color: #f0f0f0;
+}
+
+/* ID selector – targets element with id="header" */
+#header {
+  background-color: blue;
+  color: white;
+}
+
+/* Descendant selector – targets <span> inside <p> */
+p span {
+  color: red;
+}
+
+/* Child selector – targets direct child <li> of <ul> */
+ul > li {
+  list-style-type: square;
+}
+
+/* Group selector – applies to multiple selectors */
+h1, h2, h3 {
+  font-family: Arial, sans-serif;
+}
+
+/* Pseudo-classes */
+/* ===== PSEUDO-CLASSES ===== */
+
+/* Link states */
+a:link           { color: blue; }        /* Unvisited link */
+a:visited        { color: purple; }      /* Visited link */
+a:hover          { color: red; }         /* Mouse hover */
+a:active         { color: green; }       /* While being clicked */
+
+/* Structural */
+:first-child     { font-weight: bold; }  /* First child of parent */
+:last-child      { font-weight: bold; }  /* Last child of parent */
+:nth-child(2)    { color: orange; }      /* 2nd child (can use formula) */
+:nth-child(even) { background: #f0f0f0; } /* Even children */
+:nth-child(odd)  { background: #e0e0e0; } /* Odd children */
+:nth-of-type(2)  { color: teal; }        /* 2nd element of type */
+:first-of-type   { font-style: italic; } /* First of type */
+:last-of-type    { font-style: italic; } /* Last of type */
+:only-child      { border: 1px solid red; } /* Only child of parent */
+:empty           { display: none; }      /* Element with no children */
+
+/* Form elements */
+input:focus      { outline: 2px solid blue; } /* When focused */
+input:checked    { background: green; }       /* Checked checkbox/radio */
+input:disabled   { opacity: 0.5; }           /* Disabled input */
+input:enabled    { opacity: 1; }             /* Enabled input */
+input:required   { border: 1px solid red; }  /* Required field */
+input:optional   { border: 1px solid green; }/* Optional field */
+
+/* UI states */
+:root            { --main-color: blue; }    /* Root element for CSS variables */
+:target          { background: yellow; }    /* Element targeted by URL hash */
+:focus-within    { background: #f9f9f9; }  /* Parent of focused element */
+:valid           { border: 1px solid green; } /* Valid input */
+:invalid         { border: 1px solid red; }   /* Invalid input */
+:checked         { background: green; }      /* Checked input */
+:hover           { cursor: pointer; }        /* Hoverable element */
+:active          { transform: scale(0.95); } /* Active (pressed) element */
+:disabled        { opacity: 0.5; }           /* Disabled element */
+:enabled         { opacity: 1; }             /* Enabled element */
+
+/* ===== PSEUDO-ELEMENTS ===== */
+
+/* Content insertion and styling */
+p::first-letter  { font-size: 2em; }        /* First letter of element */
+p::first-line    { font-weight: bold; }     /* First line of element */
+p::before        { content: "→ "; }         /* Insert content before element */
+p::after         { content: " ✔"; }         /* Insert content after element */
+::selection      { background: yellow; }    /* Selected text */
+::placeholder    { color: gray; }           /* Placeholder text in inputs */
+::marker         { color: red; }            /* List bullet or marker */
+::backdrop       { background: rgba(0,0,0,0.5); } /* Modal or dialog backdrop */
+::cue            { color: yellow; }         /* WebVTT captions */
+::spelling-error { text-decoration: underline wavy red; } /* Spelling error */
+::grammar-error  { text-decoration: underline wavy green; } /* Grammar error */
+
+/* ===== COMBINED EXAMPLES ===== */
+a:hover::after   { content: " 🔗"; }         /* Add icon after link on hover */
+li:first-child::marker { color: blue; }      /* Change bullet color of first li */
+input:focus::placeholder { color: lightblue; } /* Change placeholder on focus */
+
+
+/* Attribute selectors */
+input[type="text"] {
+  border: 1px solid gray;
+}
+
+/* ===== COLORS ===== */
+color: #333333;                       /* Hex color */
+background-color: rgb(255, 255, 255); /* RGB color */
+background-color: rgba(0, 0, 0, 0.5); /* RGBA with transparency */
+color: hsl(120, 50%, 50%);            /* HSL color */
+
+/* ===== TEXT & FONT ===== */
+font-family: Arial, sans-serif;       /* Font family */
+font-size: 16px;                      /* Font size */
+font-weight: bold;                    /* normal, bold, 100-900 */
+font-style: italic;                   /* normal, italic, oblique */
+text-align: center;                   /* left, center, right, justify */
+text-decoration: underline;           /* none, underline, line-through */
+text-transform: uppercase;            /* capitalize, uppercase, lowercase */
+line-height: 1.5;                     /* Spacing between lines */
+letter-spacing: 2px;                  /* Spacing between letters */
+
+/* ===== BOX MODEL ===== */
+width: 200px;                         /* Width of element */
+height: 100px;                        /* Height of element */
+padding: 10px;                        /* Inner spacing */
+margin: 20px;                         /* Outer spacing */
+border: 1px solid black;              /* Border style */
+box-sizing: border-box;               /* Includes padding and border in width/height */
+
+/* ===== DISPLAY & POSITION ===== */
+display: block;                        /* inline, block, inline-block, flex, grid, none */
+visibility: visible;                   /* visible, hidden */
+overflow: hidden;                      /* visible, hidden, scroll, auto */
+position: static;                      /* static, relative, absolute, fixed, sticky */
+top: 10px;                             /* Vertical offset */
+left: 10px;                            /* Horizontal offset */
+z-index: 10;                           /* Layering order */
+
+/* ===== FLEXBOX ===== */
+display: flex;                          /* Enables flex layout */
+flex-direction: row;                    /* row, column, row-reverse, column-reverse */
+justify-content: center;                /* flex-start, flex-end, center, space-between */
+align-items: center;                    /* flex-start, flex-end, center, stretch */
+flex-wrap: wrap;                        /* nowrap, wrap, wrap-reverse */
+gap: 10px;                              /* Spacing between flex items */
+
+/* ===== GRID ===== */
+display: grid;                          /* Enables grid layout */
+grid-template-columns: 1fr 2fr;         /* Column sizes */
+grid-template-rows: 100px 200px;        /* Row sizes */
+grid-gap: 10px;                         /* Spacing between cells */
+justify-items: center;                  /* Align items horizontally */
+align-items: center;                    /* Align items vertically */
+
+/* ===== BACKGROUND ===== */
+background-color: #eee;                 /* Background color */
+background-image: url("image.jpg");     /* Background image */
+background-size: cover;                 /* cover, contain */
+background-repeat: no-repeat;           /* repeat, no-repeat, repeat-x, repeat-y */
+background-position: center;            /* top, bottom, center, left, right */
+
+/* ===== TRANSITIONS & ANIMATIONS ===== */
+transition: all 0.3s ease;              /* Smooth property change */
+animation: slide 2s infinite;           /* Animation shorthand */
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(50px); }
+  100% { transform: translateX(0); }
+}
+
+/* ===== SHADOWS ===== */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Box shadow */
+text-shadow: 1px 1px 2px gray;               /* Text shadow */
+
+/* ===== CURSORS ===== */
+cursor: pointer;                           /* pointer, default, text, move, not-allowed */
+
+/* ===== OTHER USEFUL PROPERTIES ===== */
+opacity: 0.8;                              /* Transparency */
+overflow: hidden;                           /* Hide overflowing content */
+clip-path: circle(50%);                     /* Shape clipping */

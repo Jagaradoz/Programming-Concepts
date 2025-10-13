@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <title>Bootstrap Modals Cheat Sheet</title>
+</head>
+
+<body>
+  <div class="container my-4">
+    <h1 class="mb-4 text-center">Bootstrap Modals</h1>
+
+    <!-- 1. Basic Modal -->
+    <h2>1. Basic Modal</h2>
+    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#basicModal">
+      Launch Basic Modal
+    </button>
+
+    <div class="modal fade" id="basicModal" tabindex="-1" aria-labelledby="basicModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="basicModalLabel">Basic Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This is a basic Bootstrap modal example.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 2. Modal with Scrollable Body -->
+    <h2>2. Scrollable Modal</h2>
+    <button type="button" class="btn btn-success mb-3" data-bs-toggle="modal" data-bs-target="#scrollModal">
+      Launch Scrollable Modal
+    </button>
+
+    <div class="modal fade" id="scrollModal" tabindex="-1" aria-labelledby="scrollModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="scrollModalLabel">Scrollable Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>This modal body is scrollable if content is long.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 3. Modal with Centered Dialog -->
+    <h2>3. Vertically Centered Modal</h2>
+    <button type="button" class="btn btn-warning mb-3" data-bs-toggle="modal" data-bs-target="#centerModal">
+      Launch Centered Modal
+    </button>
+
+    <div class="modal fade" id="centerModal" tabindex="-1" aria-labelledby="centerModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="centerModalLabel">Centered Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            This modal is vertically centered on the screen.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 4. Modal Sizes -->
+    <h2>4. Modal Sizes</h2>
+    <div class="mb-3">
+      <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#smallModal">Small Modal</button>
+      <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal" data-bs-target="#largeModal">Large Modal</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#extraLargeModal">Extra Large Modal</button>
+    </div>
+
+    <div class="modal fade" id="smallModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Small Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">This is a small modal.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="largeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Large Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">This is a large modal.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="extraLargeModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Extra Large Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">This is an extra large modal.</div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- 5. Fullscreen Modal -->
+    <h2>5. Fullscreen Modal</h2>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#fullscreenModal">
+      Launch Fullscreen Modal
+    </button>
+
+    <div class="modal fade" id="fullscreenModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Fullscreen Modal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            This modal occupies the entire viewport.
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <title>Bootstrap Cards Cheat Sheet</title>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1 class="mb-4 text-center">Cards</h1>
+
+        <h2>1. Basic Card</h2>
+        <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card Title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card Subtitle</h6>
+                <p class="card-text">Quick example text to build on the card title and make up the bulk of the content.
+                </p>
+                <a href="#" class="card-link">Card Link</a>
+                <a href="#" class="card-link">Another Link</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>2. Card with Image</h2>
+        <div class="card mb-3" style="width: 18rem;">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                class="card-img-top" alt="Teamwork">
+            <div class="card-body">
+                <h5 class="card-title">Team Collaboration</h5>
+                <p class="card-text">A simple card with a relevant work image on top.</p>
+                <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>3. Card with Image Overlay</h2>
+        <div class="card text-bg-dark mb-3">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80"
+                class="card-img" alt="Office Meeting">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Image Overlay</h5>
+                <p class="card-text">Overlay text on an image using <code>.card-img-overlay</code>.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>4. Header & Footer</h2>
+        <div class="card mb-3 text-center" style="width: 18rem;">
+            <div class="card-header">Featured Project</div>
+            <div class="card-body">
+                <h5 class="card-title">Office Redesign</h5>
+                <p class="card-text">Supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">View Project</a>
+            </div>
+            <div class="card-footer text-muted">Updated 2 days ago</div>
+        </div>
+
+        <hr>
+
+        <h2>5. Card with List Group</h2>
+        <div class="card mb-3" style="width: 18rem;">
+            <div class="card-header">Task List</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Meeting with design team</li>
+                <li class="list-group-item">Client review</li>
+                <li class="list-group-item">Finalize report</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <h2>6. Card Layouts (Grid)</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
+                        class="card-img-top" alt="Laptop workspace">
+                    <div class="card-body">
+                        <h5 class="card-title">Remote Work</h5>
+                        <p class="card-text">Efficient setup for modern workspace productivity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Team brainstorming">
+                    <div class="card-body">
+                        <h5 class="card-title">Brainstorm Session</h5>
+                        <p class="card-text">Creative collaboration for new projects and ideas.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+                        class="card-img-top" alt="Presentation">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Presentation</h5>
+                        <p class="card-text">Showcasing key insights and team results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <h2>7. Background & Border Variants</h2>
+        <div class="card text-bg-primary mb-2" style="width: 18rem;">
+            <div class="card-body">Primary Card</div>
+        </div>
+        <div class="card text-bg-success mb-2" style="width: 18rem;">
+            <div class="card-body">Success Card</div>
+        </div>
+        <div class="card border-danger mb-2" style="width: 18rem;">
+            <div class="card-body text-danger">Danger Border Card</div>
+        </div>
+
+        <hr>
+
+        <h2>8. Horizontal Card</h2>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+                        class="img-fluid rounded-start" alt="Laptop desk">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Horizontal Card</h5>
+                        <p class="card-text">Image on the left, text on the right for a clean business layout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
