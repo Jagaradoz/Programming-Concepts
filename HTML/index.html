@@ -1,0 +1,158 @@
+<head>
+  <title>My Website</title>                               <!-- Page title (shown in browser tab) -->
+  <link rel="stylesheet" href="styles.css">               <!-- Link to external CSS file -->
+  <link rel="icon" type="image/png" href="favicon.png">   <!-- Browser tab icon -->
+</head>
+
+
+<!-- ===== TEXT FORMATTING TAGS ===== -->
+<h1>Main Heading</h1>                              <!-- Largest heading -->
+<h2>Sub Heading</h2>                               <!-- Smaller heading -->
+<h3>Smaller heading</h3>                           <!-- Even smaller heading -->
+<h4>Heading 4</h4>                                 <!-- Level 4 heading -->
+<p>This is a paragraph.</p>                        <!-- Basic text block -->
+<br>                                               <!-- Line break -->
+<hr>                                               <!-- Horizontal line -->
+
+<strong>Bold and important</strong>                <!-- Semantic strong text -->
+<b>Bold text (stylistic)</b>                       <!-- Bold without importance -->
+<em>Emphasized text (semantic italic)</em>         <!-- Emphasis with meaning -->
+<i>Italic text (stylistic)</i>                     <!-- Italic without emphasis -->
+<u>Underlined text</u>                             <!-- Underlined text -->
+<small>Smaller text</small>                        <!-- Smaller-sized text -->
+<mark>Highlighted text</mark>                      <!-- Highlighted text -->
+<sub>Subscript</sub>                               <!-- Text below baseline -->
+<sup>Superscript</sup>                             <!-- Text above baseline -->
+
+<!-- ===== LINKS & IMAGES ===== -->
+<a href="https://example.com" target="_blank">Visit Example</a>   <!-- Hyperlink -->
+<img src="image.jpg" alt="Description of image" width="200" height="150">  <!-- Image with alt text -->
+
+<!-- ===== LISTS ===== -->
+<ul>                                               <!-- Unordered list -->
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+
+<ol type="1">                                      <!-- Ordered list (1, A, a, I, i) -->
+  <li>Step 1</li>
+  <li>Step 2</li>
+</ol>
+
+<dl>                                               <!-- Description list -->
+  <dt>HTML</dt>                                    <!-- Term -->
+  <dd>HyperText Markup Language</dd>               <!-- Definition -->
+</dl>
+
+<!-- ===== TABLES ===== -->
+<table border="1">
+  <caption>Sample Table</caption>                  <!-- Table caption -->
+  <thead>
+    <tr>
+      <th>Header 1</th>                            <!-- Table header -->
+      <th>Header 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Data 1</td>                              <!-- Table data -->
+      <td>Data 2</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- ===== FORMS ===== -->
+<form action="/submit" method="post">               <!-- Form with POST method -->
+  <label for="name">Name:</label>                  
+  <input type="text" id="name" name="username" placeholder="Enter name" required>  <!-- Text input -->
+  <input type="password" name="password" placeholder="Password">                   <!-- Password field -->
+  <input type="email" name="email" placeholder="Email">                            <!-- Email field -->
+  <textarea name="message" rows="4" cols="30"></textarea>                          <!-- Multi-line input -->
+
+  <select name="choice">                                       <!-- Dropdown menu -->
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+
+  <input type="checkbox" name="subscribe" checked> Subscribe   <!-- Checkbox -->
+  <input type="radio" name="gender" value="male"> Male         <!-- Radio button -->
+  <input type="radio" name="gender" value="female"> Female
+  <input type="submit" value="Submit">                         <!-- Submit button -->
+  <input type="reset" value="Reset">                           <!-- Reset button -->
+</form>
+
+<!-- ===== SEMANTIC ELEMENTS ===== -->
+<header>Header content (logo, nav, etc.)</header>              <!-- Page header -->
+<nav>Navigation links</nav>                                    <!-- Navigation bar -->
+<main>Main content area</main>                                 <!-- Main section -->
+<section>Section of related content</section>                  <!-- Thematic section -->
+<article>Independent piece of content</article>                <!-- Self-contained article -->
+<aside>Sidebar or related info</aside>                         <!-- Sidebar -->
+<footer>Footer content</footer>                                <!-- Page footer -->
+
+<!-- ===== MEDIA ===== -->
+<video src="movie.mp4" controls width="400"></video>                  <!-- Video player -->
+<audio src="audio.mp3" controls></audio>                              <!-- Audio player -->
+<iframe src="https://example.com" width="600" height="400"></iframe>  <!-- Embedded frame -->
+
+<!-- ===== META & SEO ===== -->
+<meta name="description" content="Page description for search engines">  <!-- SEO description -->
+<meta name="keywords" content="HTML, cheat sheet, tutorial">             <!-- SEO keywords -->
+<meta name="author" content="Your Name">                                 <!-- Author info -->
+
+<!-- ===== SPECIAL CHARACTERS ===== -->
+<!-- Use HTML entities for reserved characters -->
+&lt;        <!-- Less than (<) -->
+&gt;        <!-- Greater than (>) -->
+&amp;       <!-- Ampersand (&) -->
+&quot;      <!-- Double quote (") -->
+&apos;      <!-- Single quote (') -->
+&nbsp;      <!-- Non-breaking space -->
+
+<!-- ===== STRUCTURAL / CONTAINER TAGS ===== -->
+<div>Generic block container</div>                             <!-- Block-level container -->
+<span>Generic inline container</span>                          <!-- Inline-level container -->
+
+<!-- ===== HTML5 ELEMENTS ===== -->
+<figure>                                                       <!-- Image + caption -->
+  <img src="image.jpg" alt="Example">
+  <figcaption>Image caption</figcaption>
+</figure>
+
+<details>                                                      <!-- Expandable content -->
+  <summary>Click to expand</summary>
+  <p>Hidden details revealed here.</p>
+</details>
+
+<progress value="70" max="100"></progress>                     <!-- Progress bar -->
+<meter value="0.6">60%</meter>                                 <!-- Gauge display -->
+<time datetime="2025-10-07">October 7, 2025</time>             <!-- Machine-readable date -->
+
+<!-- ===== SCRIPT & STYLE ===== -->
+<div id="header">This is the header</div>        <!-- ID selector -->
+<div class="box">Box 1</div>                      <!-- Class selector -->
+<div class="box">Box 2</div>
+
+<!-- CSS -->
+<style>
+  /* ID selector (#) – unique element */
+  #header {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Class selector (.) – reusable */
+  .box {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  console.log("Hello, HTML!");                                  // Inline JavaScript
+</script>
