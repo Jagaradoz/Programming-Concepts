@@ -1,0 +1,38 @@
+-- Workspace: Contains all physical objects in the 3D world.
+    -- Terrain: The landscape mesh that forms the ground.
+    -- Baseplate: Physical building blocks like Parts, MeshParts, etc.
+    -- Models: Groupings of parts and objects forming complex structures.
+-- Players: Manages all players currently in the game.
+    -- Player instances: Each represents a player with properties like Character and Backpack.
+    -- Character: The in-game avatar model of the player.
+    -- Backpack: Inventory holding tools and items for the player.
+-- Lighting: Controls lighting and environmental effects.
+    -- Sky: Defines the skybox visuals.
+    -- FogSettings: Controls fog color and density.
+    -- ShadowMapSettings: Configures shadow rendering details.
+-- MaterialService: Allows creating and managing custom materials applied to parts.
+-- NetworkClient: Handles client-server communication (internal use).
+-- ReplicatedFirst: Contains objects/scripts loaded on the client before anything else, useful for loading screens.
+-- ReplicatedStorage: Storage shared between server and clients.
+    -- ModuleScripts: Shared code libraries.
+    -- Assets: Models, sounds, or other resources.
+-- ServerScriptService: Holds server-only scripts that run on the server.
+    -- Script instances: Server logic like game rules and data handling.
+-- ServerStorage: Stores server-only assets hidden from clients.
+-- StarterGui: Holds GUI templates cloned to each player’s PlayerGui.
+    -- ScreenGui: Root container for 2D UI elements.
+    -- Frames, Buttons: UI components inside ScreenGui.
+-- StarterPack: Contains tools and items automatically given to players.
+    -- Tool instances: Weapons, gadgets, or interactive items.
+-- StarterPlayer: Holds player-related defaults.
+    -- StarterCharacterScripts: Scripts cloned into player’s character.
+    -- StarterPlayerScripts: Scripts cloned into the player instance.
+-- Teams: Defines teams for grouping players.
+    -- Team instances: Each with properties like TeamColor and TeamName.
+    -- Player.Team: The team a player belongs to.
+-- SoundService: Manages global sound settings.
+    -- Ambient sounds: Background music or environmental sounds.
+    -- SoundGroups: Grouping sounds for volume and effect control.
+-- TextChatService: Controls the chat system.
+    -- ChatChannels: Different chat streams (global, team, private).
+    -- ChatConfigurations: Settings for chat behavior and moderation.
