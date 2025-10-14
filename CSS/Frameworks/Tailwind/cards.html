@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Cards Cheat Sheet</title>
+</head>
+
+<body class="p-6 bg-gray-100">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Cards</h1>
+
+    <!-- 1. Basic Card -->
+    <h2 class="text-2xl font-semibold mb-2">1. Basic Card</h2>
+    <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden mb-6">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Workspace">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Remote Work</h3>
+        <p class="text-gray-700 text-base">Efficient setup for modern workspace productivity.</p>
+      </div>
+    </div>
+
+    <!-- 2. Card with Footer -->
+    <h2 class="text-2xl font-semibold mb-2">2. Card with Footer</h2>
+    <div class="max-w-sm bg-white rounded-lg shadow-md overflow-hidden mb-6">
+      <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Team">
+      <div class="p-4">
+        <h3 class="text-xl font-bold mb-2">Brainstorm Session</h3>
+        <p class="text-gray-700 text-base">Creative collaboration for new projects and ideas.</p>
+      </div>
+      <div class="px-4 py-2 bg-gray-100 text-gray-800 text-sm">Last updated 2 hours ago</div>
+    </div>
+
+    <!-- 3. Card Grid Layout -->
+    <h2 class="text-2xl font-semibold mb-2">3. Card Grid</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Project 1">
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Project 1</h3>
+          <p class="text-gray-700 text-sm">Key insights and updates from the team.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Project 2">
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Project 2</h3>
+          <p class="text-gray-700 text-sm">Collaborative tasks and milestones.</p>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img class="w-full h-48 object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80" alt="Project 3">
+        <div class="p-4">
+          <h3 class="text-lg font-bold mb-1">Project 3</h3>
+          <p class="text-gray-700 text-sm">Showcasing key results and deliverables.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

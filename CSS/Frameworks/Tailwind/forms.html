@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Forms / Inputs Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Forms / Inputs</h1>
+
+    <!-- 1. Text Input -->
+    <h2 class="text-2xl font-semibold mb-2">1. Text Input</h2>
+    <input type="text" placeholder="Enter text"
+      class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4">
+
+    <!-- 2. Textarea -->
+    <h2 class="text-2xl font-semibold mb-2">2. Textarea</h2>
+    <textarea placeholder="Enter message"
+      class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500 mb-4" rows="4"></textarea>
+
+    <!-- 3. Select -->
+    <h2 class="text-2xl font-semibold mb-2">3. Select / Dropdown</h2>
+    <select class="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-500 mb-4">
+      <option>Select an option</option>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+    </select>
+
+    <!-- 4. Checkboxes & Radios -->
+    <h2 class="text-2xl font-semibold mb-2">4. Checkboxes & Radios</h2>
+    <div class="mb-4 space-y-2">
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5 text-blue-500">
+        <span class="ml-2">Checkbox 1</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5 text-green-500">
+        <span class="ml-2">Checkbox 2</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input type="radio" name="radio" class="form-radio h-5 w-5 text-purple-500">
+        <span class="ml-2">Radio 1</span>
+      </label>
+      <label class="inline-flex items-center">
+        <input type="radio" name="radio" class="form-radio h-5 w-5 text-red-500">
+        <span class="ml-2">Radio 2</span>
+      </label>
+    </div>
+
+    <!-- 5. Input Validation States -->
+    <h2 class="text-2xl font-semibold mb-2">5. Input Validation</h2>
+    <input type="text" placeholder="Valid input"
+      class="w-full p-2 border border-green-500 rounded mb-2">
+    <p class="text-green-600 text-sm mb-4">Looks good!</p>
+
+    <input type="text" placeholder="Invalid input"
+      class="w-full p-2 border border-red-500 rounded mb-2">
+    <p class="text-red-600 text-sm mb-4">Please provide a valid value.</p>
+
+    <!-- 6. Disabled & Readonly -->
+    <h2 class="text-2xl font-semibold mb-2">6. Disabled & Readonly</h2>
+    <input type="text" placeholder="Disabled input"
+      class="w-full p-2 border border-gray-300 rounded bg-gray-200 cursor-not-allowed mb-2" disabled>
+    <input type="text" placeholder="Readonly input"
+      class="w-full p-2 border border-gray-300 rounded bg-gray-100 mb-2" readonly>
+
+  </div>
+</body>
+
+</html>

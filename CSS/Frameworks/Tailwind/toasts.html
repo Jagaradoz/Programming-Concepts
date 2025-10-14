@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Toasts Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Toasts / Alerts</h1>
+
+    <!-- 1. Simple Toast -->
+    <div class="mb-4 p-4 bg-blue-500 text-white rounded shadow">
+      This is a simple info toast.
+    </div>
+
+    <!-- 2. Success Toast -->
+    <div class="mb-4 p-4 bg-green-500 text-white rounded shadow flex justify-between items-center">
+      <span>Operation successful!</span>
+      <button class="text-white font-bold ml-4" onclick="this.parentElement.style.display='none'">✕</button>
+    </div>
+
+    <!-- 3. Error / Danger Toast -->
+    <div class="mb-4 p-4 bg-red-500 text-white rounded shadow flex justify-between items-center">
+      <span>Something went wrong.</span>
+      <button class="text-white font-bold ml-4" onclick="this.parentElement.style.display='none'">✕</button>
+    </div>
+
+    <!-- 4. Auto-dismiss Toast -->
+    <div id="autoToast" class="mb-4 p-4 bg-yellow-500 text-black rounded shadow">
+      This toast will disappear in 3 seconds.
+    </div>
+
+    <button id="showToast" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Show Toast</button>
+
+  </div>
+
+  <script>
+    // Auto-dismiss toast after 3 seconds
+    setTimeout(() => {
+      const toast = document.getElementById('autoToast');
+      if (toast) toast.style.display = 'none';
+    }, 3000);
+
+    // Show toast on button click
+    document.getElementById('showToast').addEventListener('click', () => {
+      const newToast = document.createElement('div');
+      newToast.className = 'mb-4 p-4 bg-blue-500 text-white rounded shadow';
+      newToast.textContent = 'New toast shown!';
+      document.querySelector('.container').prepend(newToast);
+      setTimeout(() => newToast.remove(), 3000);
+    });
+  </script>
+</body>
+
+</html>

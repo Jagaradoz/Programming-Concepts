@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Pagination Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Pagination</h1>
+
+    <!-- 1. Basic Pagination -->
+    <h2 class="text-2xl font-semibold mb-2">1. Basic Pagination</h2>
+    <nav class="flex justify-center space-x-1 mb-6">
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">1</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">2</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">3</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">4</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">5</a>
+    </nav>
+
+    <!-- 2. Active Page -->
+    <h2 class="text-2xl font-semibold mb-2">2. Active Page</h2>
+    <nav class="flex justify-center space-x-1 mb-6">
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">1</a>
+      <a href="#" class="px-3 py-1 bg-blue-500 text-white border rounded">2</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">3</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">4</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">5</a>
+    </nav>
+
+    <!-- 3. Disabled / Prev-Next -->
+    <h2 class="text-2xl font-semibold mb-2">3. Disabled / Prev-Next</h2>
+    <nav class="flex justify-center space-x-1 mb-6">
+      <a href="#" class="px-3 py-1 bg-gray-200 text-gray-500 border rounded cursor-not-allowed">Prev</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">1</a>
+      <a href="#" class="px-3 py-1 bg-blue-500 text-white border rounded">2</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">3</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">4</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">5</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded hover:bg-gray-100">Next</a>
+    </nav>
+
+    <!-- 4. Rounded / Pill Pagination -->
+    <h2 class="text-2xl font-semibold mb-2">4. Rounded / Pill Pagination</h2>
+    <nav class="flex justify-center space-x-2 mb-6">
+      <a href="#" class="px-3 py-1 bg-white border rounded-full hover:bg-gray-100">1</a>
+      <a href="#" class="px-3 py-1 bg-blue-500 text-white border rounded-full">2</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded-full hover:bg-gray-100">3</a>
+      <a href="#" class="px-3 py-1 bg-white border rounded-full hover:bg-gray-100">4</a>
+    </nav>
+
+  </div>
+</body>
+
+</html>

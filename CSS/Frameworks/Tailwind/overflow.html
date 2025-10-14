@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Overflow / Text Truncation Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Overflow / Text Truncation</h1>
+
+    <!-- 1. Overflow Auto -->
+    <h2 class="text-2xl font-semibold mb-2">1. Overflow Auto</h2>
+    <div class="w-64 h-20 p-2 border overflow-auto mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac odio eu libero malesuada mollis.
+      Proin nec est ac elit cursus tincidunt.
+    </div>
+
+    <!-- 2. Overflow Hidden -->
+    <h2 class="text-2xl font-semibold mb-2">2. Overflow Hidden</h2>
+    <div class="w-64 h-20 p-2 border overflow-hidden mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac odio eu libero malesuada mollis.
+      Proin nec est ac elit cursus tincidunt.
+    </div>
+
+    <!-- 3. Overflow Visible -->
+    <h2 class="text-2xl font-semibold mb-2">3. Overflow Visible</h2>
+    <div class="w-64 h-20 p-2 border overflow-visible mb-4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac odio eu libero malesuada mollis.
+      Proin nec est ac elit cursus tincidunt.
+    </div>
+
+    <!-- 4. Single-line Truncation -->
+    <h2 class="text-2xl font-semibold mb-2">4. Single-line Truncation</h2>
+    <div class="w-64 p-2 border mb-4">
+      <p class="truncate">
+        This is a very long single-line text that will be truncated with an ellipsis.
+      </p>
+    </div>
+
+    <!-- 5. Multi-line Truncation -->
+    <h2 class="text-2xl font-semibold mb-2">5. Multi-line Truncation (line-clamp)</h2>
+    <div class="w-64 p-2 border mb-4">
+      <p class="line-clamp-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ac odio eu libero malesuada mollis.
+        Proin nec est ac elit cursus tincidunt. Nulla facilisi. Sed a fermentum orci, et facilisis purus.
+        Integer vitae mi euismod, tempor nisi ac, mattis nisi.
+      </p>
+    </div>
+
+    <!-- 6. Horizontal Scroll Example -->
+    <h2 class="text-2xl font-semibold mb-2">6. Horizontal Scroll</h2>
+    <div class="w-64 p-2 border overflow-x-auto whitespace-nowrap">
+      <span class="inline-block px-4 py-2 bg-blue-300 m-1">Item 1</span>
+      <span class="inline-block px-4 py-2 bg-green-300 m-1">Item 2</span>
+      <span class="inline-block px-4 py-2 bg-red-300 m-1">Item 3</span>
+      <span class="inline-block px-4 py-2 bg-yellow-300 m-1">Item 4</span>
+      <span class="inline-block px-4 py-2 bg-purple-300 m-1">Item 5</span>
+    </div>
+
+  </div>
+</body>
+
+</html>

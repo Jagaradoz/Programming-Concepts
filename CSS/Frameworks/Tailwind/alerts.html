@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Alerts Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Alerts</h1>
+
+    <!-- 1. Info Alert -->
+    <div class="mb-4 p-4 bg-blue-100 border border-blue-400 text-blue-700 rounded">
+      This is an info alert.
+    </div>
+
+    <!-- 2. Success Alert -->
+    <div class="mb-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded flex justify-between items-center">
+      <span>Operation successful!</span>
+      <button class="text-green-700 font-bold ml-4" onclick="this.parentElement.style.display='none'">✕</button>
+    </div>
+
+    <!-- 3. Warning Alert -->
+    <div class="mb-4 p-4 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded flex justify-between items-center">
+      <span>Warning: Check your input!</span>
+      <button class="text-yellow-700 font-bold ml-4" onclick="this.parentElement.style.display='none'">✕</button>
+    </div>
+
+    <!-- 4. Error / Danger Alert -->
+    <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded flex justify-between items-center">
+      <span>Error: Something went wrong!</span>
+      <button class="text-red-700 font-bold ml-4" onclick="this.parentElement.style.display='none'">✕</button>
+    </div>
+
+  </div>
+</body>
+
+</html>

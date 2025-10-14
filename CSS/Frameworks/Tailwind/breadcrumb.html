@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Breadcrumb Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Breadcrumbs</h1>
+
+    <!-- 1. Simple Breadcrumb -->
+    <h2 class="text-2xl font-semibold mb-2">1. Simple Breadcrumb</h2>
+    <nav class="flex mb-6 text-gray-600" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1">
+        <li>
+          <a href="#" class="hover:text-gray-900">Home</a>
+        </li>
+        <li>
+          <span class="mx-2">/</span>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-900">Library</a>
+        </li>
+        <li>
+          <span class="mx-2">/</span>
+        </li>
+        <li class="text-gray-500">Data</li>
+      </ol>
+    </nav>
+
+    <!-- 2. Breadcrumb with Arrow Separator -->
+    <h2 class="text-2xl font-semibold mb-2">2. Breadcrumb with Arrow Separator</h2>
+    <nav class="flex mb-6 text-gray-600" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="#" class="hover:text-gray-900">Home</a>
+        </li>
+        <li>
+          <svg class="w-4 h-4 text-gray-400 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M7.05 4.05a.5.5 0 0 1 .7 0l5 5a.5.5 0 0 1 0 .7l-5 5a.5.5 0 0 1-.7-.7L11.29 10 7.05 5.76a.5.5 0 0 1 0-.7z"/>
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="hover:text-gray-900">Library</a>
+        </li>
+        <li>
+          <svg class="w-4 h-4 text-gray-400 mx-1" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M7.05 4.05a.5.5 0 0 1 .7 0l5 5a.5.5 0 0 1 0 .7l-5 5a.5.5 0 0 1-.7-.7L11.29 10 7.05 5.76a.5.5 0 0 1 0-.7z"/>
+          </svg>
+        </li>
+        <li class="text-gray-500">Data</li>
+      </ol>
+    </nav>
+
+    <!-- 3. Compact Breadcrumb -->
+    <h2 class="text-2xl font-semibold mb-2">3. Compact Breadcrumb</h2>
+    <nav class="flex mb-6 text-gray-600 text-sm" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1">
+        <li><a href="#" class="hover:text-gray-900">Home</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li><a href="#" class="hover:text-gray-900">Library</a></li>
+        <li><span class="mx-1">›</span></li>
+        <li class="text-gray-500">Data</li>
+      </ol>
+    </nav>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Buttons & Button Groups Cheat Sheet</title>
+</head>
+
+<body class="p-6 bg-gray-100">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Buttons & Button Groups</h1>
+
+    <!-- 1. Basic Buttons -->
+    <h2 class="text-2xl font-semibold mb-2">1. Basic Buttons</h2>
+    <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded mb-2">Primary</button>
+    <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded mb-2">Success</button>
+    <button class="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-2 rounded mb-2">Danger</button>
+    <button class="bg-gray-500 hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded mb-2">Secondary</button>
+
+    <hr class="my-6">
+
+    <!-- 2. Outline Buttons -->
+    <h2 class="text-2xl font-semibold mb-2">2. Outline Buttons</h2>
+    <button class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-semibold px-4 py-2 rounded mb-2">Primary</button>
+    <button class="border border-green-500 text-green-500 hover:bg-green-500 hover:text-white font-semibold px-4 py-2 rounded mb-2">Success</button>
+    <button class="border border-red-500 text-red-500 hover:bg-red-500 hover:text-white font-semibold px-4 py-2 rounded mb-2">Danger</button>
+
+    <hr class="my-6">
+
+    <!-- 3. Button Sizes -->
+    <h2 class="text-2xl font-semibold mb-2">3. Button Sizes</h2>
+    <button class="bg-blue-500 text-white px-2 py-1 rounded mb-2 text-sm">Small</button>
+    <button class="bg-blue-500 text-white px-4 py-2 rounded mb-2 text-base">Medium</button>
+    <button class="bg-blue-500 text-white px-6 py-3 rounded mb-2 text-lg">Large</button>
+
+    <hr class="my-6">
+
+    <!-- 4. Button Groups -->
+    <h2 class="text-2xl font-semibold mb-2">4. Button Groups</h2>
+    <div class="inline-flex rounded-md shadow-sm mb-4">
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-l">Left</button>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 border-l border-white">Middle</button>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-4 py-2 rounded-r border-l border-white">Right</button>
+    </div>
+
+    <!-- 5. Vertical Button Group -->
+    <div class="inline-flex flex-col rounded-md shadow-sm">
+      <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-t mb-1">Top</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 mb-1">Middle</button>
+      <button class="bg-green-500 hover:bg-green-600 text-white font-semibold px-4 py-2 rounded-b">Bottom</button>
+    </div>
+
+  </div>
+</body>
+
+</html>

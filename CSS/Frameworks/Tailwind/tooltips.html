@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Tooltips / Popovers Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Tooltips & Popovers</h1>
+
+    <!-- 1. Simple Tooltip -->
+    <h2 class="text-2xl font-semibold mb-2">1. Simple Tooltip</h2>
+    <div class="mb-6 relative inline-block group">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded">Hover me</button>
+      <span
+        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max max-w-xs bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        This is a simple tooltip
+      </span>
+    </div>
+
+    <!-- 2. Tooltip with Arrow -->
+    <h2 class="text-2xl font-semibold mb-2">2. Tooltip with Arrow</h2>
+    <div class="mb-6 relative inline-block group">
+      <button class="bg-green-500 text-white px-4 py-2 rounded">Hover me</button>
+      <span
+        class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max max-w-xs bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+        Tooltip with arrow
+        <span class="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-gray-800 rotate-45"></span>
+      </span>
+    </div>
+
+    <!-- 3. Popover -->
+    <h2 class="text-2xl font-semibold mb-2">3. Popover (click to toggle)</h2>
+    <div class="mb-6 relative inline-block">
+      <button id="popover-btn"
+        class="bg-purple-500 text-white px-4 py-2 rounded">Click me</button>
+      <div id="popover-content"
+        class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-64 bg-white border border-gray-300 rounded shadow-lg p-4 hidden z-50">
+        <h3 class="font-semibold mb-2">Popover Title</h3>
+        <p class="text-gray-700 text-sm">This is a popover with richer content. You can add text, links, or even forms here.</p>
+        <button id="close-popover"
+          class="mt-2 bg-gray-300 hover:bg-gray-400 px-3 py-1 rounded text-gray-700">Close</button>
+      </div>
+    </div>
+
+    <!-- 4. Tooltip on different positions -->
+    <h2 class="text-2xl font-semibold mb-2">4. Tooltip Positions</h2>
+    <div class="flex space-x-4 mb-6">
+      <div class="relative group">
+        <button class="bg-red-500 text-white px-4 py-2 rounded">Top</button>
+        <span class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-max bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          Top Tooltip
+        </span>
+      </div>
+      <div class="relative group">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">Right</button>
+        <span class="absolute top-1/2 left-full transform -translate-y-1/2 ml-2 w-max bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          Right Tooltip
+        </span>
+      </div>
+      <div class="relative group">
+        <button class="bg-green-500 text-white px-4 py-2 rounded">Bottom</button>
+        <span class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-max bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          Bottom Tooltip
+        </span>
+      </div>
+      <div class="relative group">
+        <button class="bg-yellow-500 text-white px-4 py-2 rounded">Left</button>
+        <span class="absolute top-1/2 right-full transform -translate-y-1/2 mr-2 w-max bg-gray-800 text-white text-sm rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
+          Left Tooltip
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const popoverBtn = document.getElementById('popover-btn');
+    const popoverContent = document.getElementById('popover-content');
+    const closePopover = document.getElementById('close-popover');
+
+    popoverBtn.addEventListener('click', () => {
+      popoverContent.classList.toggle('hidden');
+    });
+
+    closePopover.addEventListener('click', () => {
+      popoverContent.classList.add('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!popoverBtn.contains(e.target) && !popoverContent.contains(e.target)) {
+        popoverContent.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>

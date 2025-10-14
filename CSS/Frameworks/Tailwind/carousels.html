@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Carousel / Slider Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Carousel / Slider</h1>
+
+    <!-- Carousel Container -->
+    <div class="relative w-full max-w-xl mx-auto overflow-hidden rounded-lg shadow-lg">
+      <div id="carousel" class="flex transition-transform duration-500">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+          class="w-full flex-shrink-0" alt="Slide 1">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+          class="w-full flex-shrink-0" alt="Slide 2">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"
+          class="w-full flex-shrink-0" alt="Slide 3">
+      </div>
+
+      <!-- Previous Button -->
+      <button id="prev"
+        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded opacity-75 hover:opacity-100">
+        ❮
+      </button>
+
+      <!-- Next Button -->
+      <button id="next"
+        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white px-2 py-1 rounded opacity-75 hover:opacity-100">
+        ❯
+      </button>
+    </div>
+
+    <!-- Indicators -->
+    <div class="flex justify-center space-x-2 mt-4">
+      <button class="w-3 h-3 rounded-full bg-gray-400" data-index="0"></button>
+      <button class="w-3 h-3 rounded-full bg-gray-400" data-index="1"></button>
+      <button class="w-3 h-3 rounded-full bg-gray-400" data-index="2"></button>
+    </div>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const slides = carousel.children;
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    const indicators = document.querySelectorAll('[data-index]');
+    let index = 0;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+      indicators.forEach((dot, i) => dot.classList.toggle('bg-gray-800', i === index));
+    }
+
+    prevBtn.addEventListener('click', () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    });
+
+    indicators.forEach(dot => {
+      dot.addEventListener('click', () => {
+        index = parseInt(dot.dataset.index);
+        updateCarousel();
+      });
+    });
+
+    updateCarousel();
+  </script>
+</body>
+
+</html>

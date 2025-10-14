@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Tailwind CSS Transitions & Animations Cheat Sheet</title>
+</head>
+
+<body class="bg-gray-100 p-6">
+  <div class="container mx-auto">
+    <h1 class="mb-6 text-4xl font-bold text-center">Tailwind CSS Transitions & Animations</h1>
+
+    <!-- 1. Transition Basics -->
+    <h2 class="text-2xl font-semibold mb-2">1. Transition Basics</h2>
+    <div class="flex space-x-4 mb-6">
+      <div class="bg-blue-500 text-white px-4 py-2 rounded transition duration-500 hover:bg-blue-600">
+        Background Color
+      </div>
+      <div class="bg-green-500 text-white px-4 py-2 rounded transition duration-700 hover:scale-110 transform">
+        Scale
+      </div>
+      <div class="bg-red-500 text-white px-4 py-2 rounded transition duration-300 hover:opacity-50">
+        Opacity
+      </div>
+    </div>
+
+    <!-- 2. Transition Properties -->
+    <h2 class="text-2xl font-semibold mb-2">2. Transition Properties</h2>
+    <div class="flex space-x-4 mb-6">
+      <div class="bg-blue-500 text-white px-4 py-2 rounded transition-colors duration-500 hover:bg-blue-700">
+        Colors
+      </div>
+      <div class="bg-green-500 text-white px-4 py-2 rounded transition-transform duration-500 hover:scale-125 transform">
+        Transform
+      </div>
+      <div class="bg-red-500 text-white px-4 py-2 rounded transition-opacity duration-500 hover:opacity-25">
+        Opacity
+      </div>
+    </div>
+
+    <!-- 3. Transition Timing Functions -->
+    <h2 class="text-2xl font-semibold mb-2">3. Transition Timing Functions</h2>
+    <div class="flex space-x-4 mb-6">
+      <div class="bg-blue-500 text-white px-4 py-2 rounded transition duration-500 ease-linear hover:scale-110 transform">
+        Linear
+      </div>
+      <div class="bg-green-500 text-white px-4 py-2 rounded transition duration-500 ease-in hover:scale-110 transform">
+        Ease-in
+      </div>
+      <div class="bg-red-500 text-white px-4 py-2 rounded transition duration-500 ease-out hover:scale-110 transform">
+        Ease-out
+      </div>
+      <div class="bg-yellow-500 text-white px-4 py-2 rounded transition duration-500 ease-in-out hover:scale-110 transform">
+        Ease-in-out
+      </div>
+    </div>
+
+    <!-- 4. Animation Example -->
+    <h2 class="text-2xl font-semibold mb-2">4. Animation Example (Pulse)</h2>
+    <div class="flex space-x-4 mb-6">
+      <div class="bg-blue-500 text-white px-6 py-4 rounded animate-pulse">
+        Pulse
+      </div>
+      <div class="bg-green-500 text-white px-6 py-4 rounded animate-bounce">
+        Bounce
+      </div>
+      <div class="bg-red-500 text-white px-6 py-4 rounded animate-spin">
+        Spin
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
